@@ -76,8 +76,10 @@ function load(twitch_channel, hitbox_channel, stream_source) {
     }
 
     // Set up menubar
-    document.getElementsByName("twitch")[0].value = twitch_channel;
-    document.getElementsByName("hitbox")[0].value = hitbox_channel;
+    if (twitch_channel && hitbox_channel) {
+        document.getElementsByName("twitch")[0].value = twitch_channel;
+        document.getElementsByName("hitbox")[0].value = hitbox_channel;
+    }
 
 } 
 
